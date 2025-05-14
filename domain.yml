@@ -1,0 +1,178 @@
+version: '3.1'
+intents:
+- affirm_en
+- affirm_my
+- ask_death_today_en
+- ask_death_today_my
+- ask_jualbeli_by_keyword_en
+- ask_jualbeli_by_keyword_my
+- ask_latest_hebahan
+- ask_latest_news_en
+- ask_latest_news_my
+- ask_news_by_keyword_en
+- ask_news_by_keyword_my
+- ask_openning_restaurant_my
+- ask_restaurant_category_my
+- ask_restaurant_foodtype_my
+- ask_restaurant_near_my
+- ask_restaurant_recommended
+- bot_challenge_en
+- bot_challenge_my
+- confirm_check_en
+- confirm_check_my
+- deny_en
+- deny_my
+- goodbye_en
+- goodbye_my
+- greet_en
+- greet_my
+
+- mood_great_en
+- mood_great_my
+- mood_unhappy_en
+- mood_unhappy_my
+- salam
+- search_restaurant_name_my
+- thanks_my
+
+- dont_know_where_to_eat
+- inform
+
+forms:
+  restaurant_suggestion_form:
+    required_slots:
+      - req_area
+      - req_food_type
+
+entities:
+- food_type
+- area
+- restaurant_name
+- keyword
+- jualbeli_item
+- restaurant_category
+
+slots:
+  keyword:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: keyword
+  jualbeli_item:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: jualbeli_item
+  restaurant_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: restaurant_name
+  area:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: area
+  food_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: food_type
+  restaurant_category:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: restaurant_category
+
+  req_area:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: area
+
+  req_food_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: food_type
+
+responses:
+  utter_salam:
+  - text: Waalaikum salam.
+  utter_greet_en:
+  - text: Hey! How can I help you today?"
+  utter_greet_my:
+  - text: Hai! Apa yang boleh saya bantu?
+  utter_cheer_up_en:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_cheer_up_my:
+  - text: 'Ini sesuatu untuk menceriakan awak:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help_en:
+  - text: Did that help you?
+  utter_did_that_help_my:
+  - text: Adakah itu membantu?
+  utter_happy_en:
+  - text: Great, carry on!
+  utter_happy_my:
+  - text: Bagus, teruskan!
+  utter_goodbye_en:
+  - text: Bye
+  utter_goodbye_my:
+  - text: Selamat tinggal
+  utter_iamabot_en:
+  - text: I am a SARA, powered by Rasa.
+  utter_iamabot_my:
+  - text: Saya ialah SARA, dikuasakan oleh Rasa.
+  utter_confirm_check_en:
+  - text: For more information, please check the relevant section.
+  utter_confirm_check_my:
+  - text: Untuk maklumat lanjut, sila semak bahagian yang berkaitan.
+  utter_ask_area_error:
+  - text: Sorry I could not understand.
+  utter_ask_area:
+  - text: Di kawasan mana anda ingin mencari restoran?
+  utter_ask_food_type:
+  - text: 'Jenis makanan apa yang anda inginkan? (Contoh: Melayu, Barat, Cina, India)'
+  utter_submit:
+  - text: tak tahu nak makan mana ya? tak menagapa biar saya cadangkan
+
+  utter_reply_thanks:
+  - text: Sama-sama, saya sedia untuk membantu anda!😊
+
+  utter_ask_req_area:
+  - text: "Di kawasan mana awak nak makan?"
+  utter_ask_req_food_type:
+  - text: "Jenis makanan apa yang awak cari?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+actions:
+- action_display_latest_hebahan
+- action_suggest_random_restaurant
+- action_find_restaurants_by_food_type
+- action_find_restaurants_nearby
+- action_find_open_restaurants_now
+- action_search_restaurant_by_name
+- action_find_restaurants_by_category
+- action_recommend_restaurants
+- utter_happy_en
+- utter_greet_my
+- action_fetch_death_today
+- action_display_latest_news
+- action_search_news
+- utter_goodbye_en
+- utter_iamabot_en
+- utter_salam
+- utter_iamabot_my
+- action_search_item
+- action_suggest_restaurant
+

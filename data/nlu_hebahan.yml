@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_news_by_keyword_en
+  examples: |
+    - Show me news about [Johor](keyword)
+    - Any update on [JDT](keyword)?
+    - What's happening in [silat](keyword)?
+    - Any news from [Luqman Latif](keyword)?
+    - Latest updates on [Iskandar Puteri](keyword)
+    - Tell me about [Johor Bahru](keyword) news
+    - News related to [Muar](keyword)
+    - What's new with [Johor Darul Ta'zim](keyword)?
+    - Any reports on [Batu Pahat](keyword)?
+    - Show headlines about [Kulai](keyword)
+    - Updates regarding [Pontian](keyword)
+    - News stories on [Segamat](keyword)
+    - Any developments in [Mersing](keyword)?
+    - Find me articles about [Tanjung Piai](keyword)
+    - What's trending in [Johor sports](keyword)?
+    - News coverage on [Johor education](keyword)
+    - Any recent news about [Johor tourism](keyword)?
+    - Search for [Johor politics](keyword) news
+    - Show me [Johor development](keyword) updates
+
+- intent: ask_news_by_keyword_my
+  examples: |
+    - berita pasal [jdt]{"entity": "keyword", "value": "JDT"}
+    - berita [sekolah](keyword)
+    - Tunjukkan berita tentang [Johor](keyword)
+    - Ada tak info tentang [JDT](keyword)?
+    - Ada tak info berkenaan [JDT](keyword)?
+    - Ada perkembangan tentang [JDT](keyword)?
+    - Apa yang berlaku dengan [silat](keyword)?
+    - Ada berita dari [Luqman Latif](keyword)?
+    - pernah [banjir](keyword) tk?
+    - Berita terbaru pasal [Iskandar Puteri](keyword)
+    - Ada update tentang [Johor Bahru](keyword)?
+    - Cerita terkini mengenai [Muar](keyword)
+    - Apa khabar [Batu Pahat](keyword) sekarang?
+    - Tolong cari berita [Kulai](keyword)
+    - Ada perkembangan [Pontian](keyword) tak?
+    - Apa isu terkini di [Kota Tinggi](keyword)?
+    - Nak tahu berita [Segamat](keyword)
+    - Ada apa-apa baru kat [Mersing](keyword)?
+    - Cari berita mengenai [Tanjung Piai](keyword)
+    - Apa yang hot dalam [sukan Johor](keyword)?
+    - Ada laporan tentang [pendidikan Johor](keyword)?
+    - Berita [pelancongan Johor](keyword) terkini
+    - Perkembangan [politik Johor](keyword) terbaru
+    - Update [pembangunan Johor](keyword) skrg
+
+- intent: ask_latest_news_en
+  examples: |
+    - What's the latest news?
+    - Any news updates?
+    - Show me the latest headlines
+    - latest news
+    - Give me the most recent news
+    - What's happening right now?
+    - Current news updates
+    - Today's top stories
+    - Breaking news please
+    - News flash
+    - Recent developments
+    - What's new in the world?
+    - Update me on current events
+    - Fresh news please
+    - Most recent headlines
+    - What's making news today?
+    - Show current affairs
+    - Tell me what's happening
+    - What are people talking about?
+    - News roundup
+
+- intent: ask_latest_news_my
+  examples: |
+    - Berita terkini
+    - Apa berita terbaru?
+    - Tunjukkan berita baru
+    - Ada apa berita baru hari ini?
+    - Berita paling baru
+    - Apa yang berlaku sekarang?
+    - Update berita semasa
+    - Cerita utama hari ini
+    - Berita panas
+    - Flash berita
+    - Perkembangan terkini
+    - Ada apa baru di dunia?
+    - Update hal semasa
+    - Berita segar
+    - Tajuk utama terbaru
+    - Apa yang popular hari ini?
+    - Tunjukkan hal semasa
+    - Ceritakan apa yang sedang berlaku
+    - Apa yang orang sedang bincang?
+    - Ringkasan berita
+
+- intent: ask_latest_hebahan
+  examples: |
+    - Hebahan terkini
+    - hebahan terbaru
+    - Ada apa-apa hebahan baru?
+    - Ada pengumuman terkini?
+    - Info hebahan terbaruy
+    - Sila paparkan hebahan terkini
+    - Update hebahan semasa
+    - Apakah makluman terkini?
+    - Boleh saya tahu hebahan hari ini?
+    - Pengumuman baru
+    - Tunjukkan info hebahan
+    - Ada pengumuman penting?
+    - Hebahan rasmi hari ini
+    - Ada apa-apa pengumuman baharu?
+    - Hebahan kerajaan terkini
+    - Apa makluman penting sekarang?
+    - Sumber hebahan terbaru
+    - Info umum terbaru
+    - Boleh saya lihat pengumuman hari ini?
+    - Tunjukkan makluman semasa

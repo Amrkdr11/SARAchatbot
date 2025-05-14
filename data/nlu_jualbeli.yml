@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_jualbeli_by_keyword_en
+  examples: |
+    - Do you sell [laptops](jualbeli_item)?
+    - Where can I buy [fresh vegetables](jualbeli_item)?
+    - I'm looking for [secondhand furniture](jualbeli_item)
+    - Is there anyone selling [baby clothes](jualbeli_item)?
+    - Who sells [organic honey](jualbeli_item) here?
+    - Can I find [gaming chairs](jualbeli_item) here?
+    - Anyone selling [iPhone 15](jualbeli_item)?
+    - Looking to buy [used textbooks](jualbeli_item)
+    - [PS5 consoles](jualbeli_item) for sale?
+    - Need to purchase [office chairs](jualbeli_item)
+    - Show me [smart watches](jualbeli_item)
+    - Find me [kitchen appliances](jualbeli_item)
+    - [Camera drones](jualbeli_item) available?
+    - Where to get [homemade cookies](jualbeli_item)?
+    - [Car accessories](jualbeli_item) for sale
+    - [Pet supplies](jualbeli_item) available?
+    - [Fitness equipment](jualbeli_item) sellers
+    - [Gardening tools](jualbeli_item) for purchase
+    - [Handmade jewelry](jualbeli_item) sellers
+
+- intent: ask_jualbeli_by_keyword_my
+  examples: |
+    - Ada jual [laptop](jualbeli_item) tak?
+    - Siapa jual [sayur segar](jualbeli_item) sini?
+    - Nak cari [perabot terpakai](jualbeli_item)
+    - Ada orang jual [baju bayi](jualbeli_item) ke?
+    - Mana boleh beli [madur asli](jualbeli_item) ni?
+    - Cari [kerusi gaming](jualbeli_item) ada?
+    - Siapa ada jual [iPhone 15](jualbeli_item)?
+    - Nak beli [buku teks terpakai](jualbeli_item)
+    - [Konsol PS5](jualbeli_item) ada jual?
+    - Perlukan [kerusi pejabat](jualbeli_item)
+    - Tunjuk [jam tangan pintar](jualbeli_item)
+    - Cari [perkakas dapur](jualbeli_item)
+    - [Drone kamera](jualbeli_item) ada?
+    - Mana boleh dapat [kuih homemade](jualbeli_item)?
+    - [Aksesori kereta](jualbeli_item) untuk dijual
+    - [Barang keperluan haiwan](jualbeli_item) ada?
+    - Penjual [peralatan fitness](jualbeli_item)
+    - [Alat kebun](jualbeli_item) nak beli
+    - Penjual [barang kemas handmade](jualbeli_item)
+    - [Barang antik](jualbeli_item) ada?

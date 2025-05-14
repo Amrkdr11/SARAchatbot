@@ -1,0 +1,153 @@
+version: "3.1"
+
+stories:
+
+- story: happy path in English
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_great_en
+  - action: utter_happy_en
+
+- story: happy path in Malay
+  steps:
+  - intent: greet_my
+  - action: utter_greet_my
+  - intent: mood_great_my
+  - action: utter_happy_my
+
+- story: sad path 1 in English
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_unhappy_en
+  - action: utter_cheer_up_en
+  - action: utter_did_that_help_en
+  - intent: affirm_en
+  - action: utter_happy_en
+
+- story: sad path 1 in Malay
+  steps:
+  - intent: greet_my
+  - action: utter_greet_my
+  - intent: mood_unhappy_my
+  - action: utter_cheer_up_my
+  - action: utter_did_that_help_my
+  - intent: affirm_my
+  - action: utter_happy_my
+
+- story: sad path 2 in English
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_unhappy_en
+  - action: utter_cheer_up_en
+  - action: utter_did_that_help_en
+  - intent: deny_en
+  - action: utter_goodbye_en
+
+- story: sad path 2 in Malay
+  steps:
+  - intent: greet_my
+  - action: utter_greet_my
+  - intent: mood_unhappy_my
+  - action: utter_cheer_up_my
+  - action: utter_did_that_help_my
+  - intent: deny_my
+  - action: utter_goodbye_my
+
+- story: User asks for death today(english)
+  steps:
+  - intent: ask_death_today_en
+  - action: action_fetch_death_today
+  - intent: confirm_check_en
+  - action: utter_confirm_check_en
+
+- story: User asks for death today(malay)
+  steps:
+  - intent: ask_death_today_my
+  - action: action_fetch_death_today
+  - intent: confirm_check_my
+  - action: utter_confirm_check_my
+
+- story: Search Specific News in English
+  steps:
+    - intent: ask_news_by_keyword_en
+    - action: action_search_news
+
+- story: Search Specific News in Malay
+  steps:
+    - intent: ask_news_by_keyword_my
+    - action: action_search_news
+
+- story: Show latest news english
+  steps:
+    - intent: ask_latest_news_en
+    - action: action_display_latest_news
+
+- story: Show latest news malay
+  steps:
+    - intent: ask_latest_news_my
+    - action: action_display_latest_news
+
+- story: Show latest hebahan malay
+  steps:
+    - intent: ask_latest_hebahan
+    - action: action_display_latest_hebahan
+
+
+- story: Search Specific item jual beli in English
+  steps:
+    - intent: ask_jualbeli_by_keyword_en
+    - action: action_search_item
+
+- story: Search Specific item jual beli in Malay
+  steps:
+    - intent: ask_jualbeli_by_keyword_my
+    - action: action_search_item
+
+
+- story: search restaurant by name
+  steps:
+    - intent: search_restaurant_name_my
+    - action: action_search_restaurant_by_name
+
+- story: ask restaurant by area
+  steps:
+    - intent: ask_restaurant_near_my
+    - action: action_find_restaurants_nearby
+
+- story: ask open restaurant now
+  steps:
+    - intent: ask_openning_restaurant_my
+    - action: action_find_open_restaurants_now
+
+- story: ask restaurant by food type
+  steps:
+    - intent: ask_restaurant_foodtype_my
+    - action: action_find_restaurants_by_food_type
+
+- story: ask restaurant by category
+  steps:
+    - intent: ask_restaurant_category_my
+    - action: action_find_restaurants_by_category
+
+- story: ask for recommended restaurants
+  steps:
+    - intent: ask_restaurant_recommended
+    - action: action_recommend_restaurants
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan
+  - intent: ask_latest_hebahan
+  - action: action_display_latest_hebahan

@@ -1,0 +1,852 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_restaurant_name_my
+  examples: |
+    - ada tk kedai makan [ALOMAS WESTERN DELI'S](restaurant_name)
+    - kedai makan [ALOMAS WESTERN DELI'S](restaurant_name) kt mana?
+    - mana kedai makan [ALOMAS WESTERN DELI'S](restaurant_name)?
+    - ada tk restoran [ALOMAS WESTERN DELI'S](restaurant_name)
+    - restoran [ALOMAS WESTERN DELI'S](restaurant_name) kt mana?
+    - mana restoran [ALOMAS WESTERN DELI'S](restaurant_name)?
+    - ada tk kedai makan [Mat Burger Jb](restaurant_name)
+    - kedai makan [Mat Burger Jb](restaurant_name) kt mana?
+    - mana kedai makan [Mat Burger Jb](restaurant_name)?
+    - ada tk restoran [Mat Burger Jb](restaurant_name)
+    - restoran [Mat Burger Jb](restaurant_name) kt mana?
+    - mana restoran [Mat Burger Jb](restaurant_name)?
+    - ada tk kedai makan [Restoran Pak Itam & Mak Wa](restaurant_name)
+    - kedai makan [Restoran Pak Itam & Mak Wa](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Pak Itam & Mak Wa](restaurant_name)?
+    - ada tk restoran [Restoran Pak Itam & Mak Wa](restaurant_name)
+    - restoran [Restoran Pak Itam & Mak Wa](restaurant_name) kt mana?
+    - mana restoran [Restoran Pak Itam & Mak Wa](restaurant_name)?
+    - ada tk kedai makan [Ikan Bakar No.1 JB](restaurant_name)
+    - kedai makan [Ikan Bakar No.1 JB](restaurant_name) kt mana?
+    - mana kedai makan [Ikan Bakar No.1 JB](restaurant_name)?
+    - ada tk restoran [Ikan Bakar No.1 JB](restaurant_name)
+    - restoran [Ikan Bakar No.1 JB](restaurant_name) kt mana?
+    - mana restoran [Ikan Bakar No.1 JB](restaurant_name)?
+    - ada tk kedai makan [Dallah Restaurant Johor Bahru](restaurant_name)
+    - kedai makan [Dallah Restaurant Johor Bahru](restaurant_name) kt mana?
+    - mana kedai makan [Dallah Restaurant Johor Bahru](restaurant_name)?
+    - ada tk restoran [Dallah Restaurant Johor Bahru](restaurant_name)
+    - restoran [Dallah Restaurant Johor Bahru](restaurant_name) kt mana?
+    - mana restoran [Dallah Restaurant Johor Bahru](restaurant_name)?
+    - ada tk kedai makan [Restoran Grand Seafood Kempas](restaurant_name)
+    - kedai makan [Restoran Grand Seafood Kempas](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Grand Seafood Kempas](restaurant_name)?
+    - ada tk restoran [Restoran Grand Seafood Kempas](restaurant_name)
+    - restoran [Restoran Grand Seafood Kempas](restaurant_name) kt mana?
+    - mana restoran [Restoran Grand Seafood Kempas](restaurant_name)?
+    - ada tk kedai makan [Medan Selera Tepian Tebrau](restaurant_name)
+    - kedai makan [Medan Selera Tepian Tebrau](restaurant_name) kt mana?
+    - mana kedai makan [Medan Selera Tepian Tebrau](restaurant_name)?
+    - ada tk restoran [Medan Selera Tepian Tebrau](restaurant_name)
+    - restoran [Medan Selera Tepian Tebrau](restaurant_name) kt mana?
+    - mana restoran [Medan Selera Tepian Tebrau](restaurant_name)?
+    - ada tk kedai makan [Nasi Kandaq Talam](restaurant_name)
+    - kedai makan [Nasi Kandaq Talam](restaurant_name) kt mana?
+    - mana kedai makan [Nasi Kandaq Talam](restaurant_name)?
+    - ada tk restoran [Nasi Kandaq Talam](restaurant_name)
+    - restoran [Nasi Kandaq Talam](restaurant_name) kt mana?
+    - mana restoran [Nasi Kandaq Talam](restaurant_name)?
+    - ada tk kedai makan [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name)
+    - kedai makan [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name) kt mana?
+    - mana kedai makan [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name)?
+    - ada tk restoran [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name)
+    - restoran [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name) kt mana?
+    - mana restoran [Tarim Hadramawt Restoran @ Noy Restoran Kampung Danga](restaurant_name)?
+    - ada tk kedai makan [Warisan Anjung Petai](restaurant_name)
+    - kedai makan [Warisan Anjung Petai](restaurant_name) kt mana?
+    - mana kedai makan [Warisan Anjung Petai](restaurant_name)?
+    - ada tk restoran [Warisan Anjung Petai](restaurant_name)
+    - restoran [Warisan Anjung Petai](restaurant_name) kt mana?
+    - mana restoran [Warisan Anjung Petai](restaurant_name)?
+    - ada tk kedai makan [Dapo Tokma](restaurant_name)
+    - kedai makan [Dapo Tokma](restaurant_name) kt mana?
+    - mana kedai makan [Dapo Tokma](restaurant_name)?
+    - ada tk restoran [Dapo Tokma](restaurant_name)
+    - restoran [Dapo Tokma](restaurant_name) kt mana?
+    - mana restoran [Dapo Tokma](restaurant_name)?
+    - ada tk kedai makan [Hijrah Dim Sum JB](restaurant_name)
+    - kedai makan [Hijrah Dim Sum JB](restaurant_name) kt mana?
+    - mana kedai makan [Hijrah Dim Sum JB](restaurant_name)?
+    - ada tk restoran [Hijrah Dim Sum JB](restaurant_name)
+    - restoran [Hijrah Dim Sum JB](restaurant_name) kt mana?
+    - mana restoran [Hijrah Dim Sum JB](restaurant_name)?
+    - ada tk kedai makan [Banafee Village](restaurant_name)
+    - kedai makan [Banafee Village](restaurant_name) kt mana?
+    - mana kedai makan [Banafee Village](restaurant_name)?
+    - ada tk restoran [Banafee Village](restaurant_name)
+    - restoran [Banafee Village](restaurant_name) kt mana?
+    - mana restoran [Banafee Village](restaurant_name)?
+    - ada tk kedai makan [The Replacement - Lodge & Kitchen](restaurant_name)
+    - kedai makan [The Replacement - Lodge & Kitchen](restaurant_name) kt mana?
+    - mana kedai makan [The Replacement - Lodge & Kitchen](restaurant_name)?
+    - ada tk restoran [The Replacement - Lodge & Kitchen](restaurant_name)
+    - restoran [The Replacement - Lodge & Kitchen](restaurant_name) kt mana?
+    - mana restoran [The Replacement - Lodge & Kitchen](restaurant_name)?
+    - ada tk kedai makan [Lepak Corner](restaurant_name)
+    - kedai makan [Lepak Corner](restaurant_name) kt mana?
+    - mana kedai makan [Lepak Corner](restaurant_name)?
+    - ada tk restoran [Lepak Corner](restaurant_name)
+    - restoran [Lepak Corner](restaurant_name) kt mana?
+    - mana restoran [Lepak Corner](restaurant_name)?
+    - ada tk kedai makan [Cafe Takdak Nama,Johor Bahru](restaurant_name)
+    - kedai makan [Cafe Takdak Nama,Johor Bahru](restaurant_name) kt mana?
+    - mana kedai makan [Cafe Takdak Nama,Johor Bahru](restaurant_name)?
+    - ada tk restoran [Cafe Takdak Nama,Johor Bahru](restaurant_name)
+    - restoran [Cafe Takdak Nama,Johor Bahru](restaurant_name) kt mana?
+    - mana restoran [Cafe Takdak Nama,Johor Bahru](restaurant_name)?
+    - ada tk kedai makan [Nasi Blauk - Larkin](restaurant_name)
+    - kedai makan [Nasi Blauk - Larkin](restaurant_name) kt mana?
+    - mana kedai makan [Nasi Blauk - Larkin](restaurant_name)?
+    - ada tk restoran [Nasi Blauk - Larkin](restaurant_name)
+    - restoran [Nasi Blauk - Larkin](restaurant_name) kt mana?
+    - mana restoran [Nasi Blauk - Larkin](restaurant_name)?
+    - ada tk kedai makan [Pondok Santapan Larkin](restaurant_name)
+    - kedai makan [Pondok Santapan Larkin](restaurant_name) kt mana?
+    - mana kedai makan [Pondok Santapan Larkin](restaurant_name)?
+    - ada tk restoran [Pondok Santapan Larkin](restaurant_name)
+    - restoran [Pondok Santapan Larkin](restaurant_name) kt mana?
+    - mana restoran [Pondok Santapan Larkin](restaurant_name)?
+    - ada tk kedai makan [Restoran Star Hadramout](restaurant_name)
+    - kedai makan [Restoran Star Hadramout](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Star Hadramout](restaurant_name)?
+    - ada tk restoran [Restoran Star Hadramout](restaurant_name)
+    - restoran [Restoran Star Hadramout](restaurant_name) kt mana?
+    - mana restoran [Restoran Star Hadramout](restaurant_name)?
+    - ada tk kedai makan [Steak Hub JB Johor Bahru](restaurant_name)
+    - kedai makan [Steak Hub JB Johor Bahru](restaurant_name) kt mana?
+    - mana kedai makan [Steak Hub JB Johor Bahru](restaurant_name)?
+    - ada tk restoran [Steak Hub JB Johor Bahru](restaurant_name)
+    - restoran [Steak Hub JB Johor Bahru](restaurant_name) kt mana?
+    - mana restoran [Steak Hub JB Johor Bahru](restaurant_name)?
+    - ada tk kedai makan [The Cave Restaurant](restaurant_name)
+    - kedai makan [The Cave Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [The Cave Restaurant](restaurant_name)?
+    - ada tk restoran [The Cave Restaurant](restaurant_name)
+    - restoran [The Cave Restaurant](restaurant_name) kt mana?
+    - mana restoran [The Cave Restaurant](restaurant_name)?
+    - ada tk kedai makan [Dulang Lima Cafe](restaurant_name)
+    - kedai makan [Dulang Lima Cafe](restaurant_name) kt mana?
+    - mana kedai makan [Dulang Lima Cafe](restaurant_name)?
+    - ada tk restoran [Dulang Lima Cafe](restaurant_name)
+    - restoran [Dulang Lima Cafe](restaurant_name) kt mana?
+    - mana restoran [Dulang Lima Cafe](restaurant_name)?
+    - ada tk kedai makan [Kapten Steamboat and Grill](restaurant_name)
+    - kedai makan [Kapten Steamboat and Grill](restaurant_name) kt mana?
+    - mana kedai makan [Kapten Steamboat and Grill](restaurant_name)?
+    - ada tk restoran [Kapten Steamboat and Grill](restaurant_name)
+    - restoran [Kapten Steamboat and Grill](restaurant_name) kt mana?
+    - mana restoran [Kapten Steamboat and Grill](restaurant_name)?
+    - ada tk kedai makan [Onn Kitchen](restaurant_name)
+    - kedai makan [Onn Kitchen](restaurant_name) kt mana?
+    - mana kedai makan [Onn Kitchen](restaurant_name)?
+    - ada tk restoran [Onn Kitchen](restaurant_name)
+    - restoran [Onn Kitchen](restaurant_name) kt mana?
+    - mana restoran [Onn Kitchen](restaurant_name)?
+    - ada tk kedai makan [Bubur Nasi Istimewa No. 1](restaurant_name)
+    - kedai makan [Bubur Nasi Istimewa No. 1](restaurant_name) kt mana?
+    - mana kedai makan [Bubur Nasi Istimewa No. 1](restaurant_name)?
+    - ada tk restoran [Bubur Nasi Istimewa No. 1](restaurant_name)
+    - restoran [Bubur Nasi Istimewa No. 1](restaurant_name) kt mana?
+    - mana restoran [Bubur Nasi Istimewa No. 1](restaurant_name)?
+    - ada tk kedai makan [Restoran Sayam 3](restaurant_name)
+    - kedai makan [Restoran Sayam 3](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Sayam 3](restaurant_name)?
+    - ada tk restoran [Restoran Sayam 3](restaurant_name)
+    - restoran [Restoran Sayam 3](restaurant_name) kt mana?
+    - mana restoran [Restoran Sayam 3](restaurant_name)?
+    - ada tk kedai makan [Restoran Warisan Wak Radol](restaurant_name)
+    - kedai makan [Restoran Warisan Wak Radol](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Warisan Wak Radol](restaurant_name)?
+    - ada tk restoran [Restoran Warisan Wak Radol](restaurant_name)
+    - restoran [Restoran Warisan Wak Radol](restaurant_name) kt mana?
+    - mana restoran [Restoran Warisan Wak Radol](restaurant_name)?
+    - ada tk kedai makan [Juara Sea Food](restaurant_name)
+    - kedai makan [Juara Sea Food](restaurant_name) kt mana?
+    - mana kedai makan [Juara Sea Food](restaurant_name)?
+    - ada tk restoran [Juara Sea Food](restaurant_name)
+    - restoran [Juara Sea Food](restaurant_name) kt mana?
+    - mana restoran [Juara Sea Food](restaurant_name)?
+    - ada tk kedai makan [The Palace Kempas JB](restaurant_name)
+    - kedai makan [The Palace Kempas JB](restaurant_name) kt mana?
+    - mana kedai makan [The Palace Kempas JB](restaurant_name)?
+    - ada tk restoran [The Palace Kempas JB](restaurant_name)
+    - restoran [The Palace Kempas JB](restaurant_name) kt mana?
+    - mana restoran [The Palace Kempas JB](restaurant_name)?
+    - ada tk kedai makan [Almadinah Restaurant](restaurant_name)
+    - kedai makan [Almadinah Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Almadinah Restaurant](restaurant_name)?
+    - ada tk restoran [Almadinah Restaurant](restaurant_name)
+    - restoran [Almadinah Restaurant](restaurant_name) kt mana?
+    - mana restoran [Almadinah Restaurant](restaurant_name)?
+    - ada tk kedai makan [Restoran Sayam 2 Taman Melati](restaurant_name)
+    - kedai makan [Restoran Sayam 2 Taman Melati](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Sayam 2 Taman Melati](restaurant_name)?
+    - ada tk restoran [Restoran Sayam 2 Taman Melati](restaurant_name)
+    - restoran [Restoran Sayam 2 Taman Melati](restaurant_name) kt mana?
+    - mana restoran [Restoran Sayam 2 Taman Melati](restaurant_name)?
+    - ada tk kedai makan [Restoran TKR](restaurant_name)
+    - kedai makan [Restoran TKR](restaurant_name) kt mana?
+    - mana kedai makan [Restoran TKR](restaurant_name)?
+    - ada tk restoran [Restoran TKR](restaurant_name)
+    - restoran [Restoran TKR](restaurant_name) kt mana?
+    - mana restoran [Restoran TKR](restaurant_name)?
+    - ada tk kedai makan [Atayeb Restaurant](restaurant_name)
+    - kedai makan [Atayeb Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Atayeb Restaurant](restaurant_name)?
+    - ada tk restoran [Atayeb Restaurant](restaurant_name)
+    - restoran [Atayeb Restaurant](restaurant_name) kt mana?
+    - mana restoran [Atayeb Restaurant](restaurant_name)?
+    - ada tk kedai makan [Restaurant Joanna Catering](restaurant_name)
+    - kedai makan [Restaurant Joanna Catering](restaurant_name) kt mana?
+    - mana kedai makan [Restaurant Joanna Catering](restaurant_name)?
+    - ada tk restoran [Restaurant Joanna Catering](restaurant_name)
+    - restoran [Restaurant Joanna Catering](restaurant_name) kt mana?
+    - mana restoran [Restaurant Joanna Catering](restaurant_name)?
+    - ada tk kedai makan [Beriani Bonda House](restaurant_name)
+    - kedai makan [Beriani Bonda House](restaurant_name) kt mana?
+    - mana kedai makan [Beriani Bonda House](restaurant_name)?
+    - ada tk restoran [Beriani Bonda House](restaurant_name)
+    - restoran [Beriani Bonda House](restaurant_name) kt mana?
+    - mana restoran [Beriani Bonda House](restaurant_name)?
+    - ada tk kedai makan [Coffee Lover](restaurant_name)
+    - kedai makan [Coffee Lover](restaurant_name) kt mana?
+    - mana kedai makan [Coffee Lover](restaurant_name)?
+    - ada tk restoran [Coffee Lover](restaurant_name)
+    - restoran [Coffee Lover](restaurant_name) kt mana?
+    - mana restoran [Coffee Lover](restaurant_name)?
+    - ada tk kedai makan [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name)
+    - kedai makan [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name) kt mana?
+    - mana kedai makan [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name)?
+    - ada tk restoran [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name)
+    - restoran [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name) kt mana?
+    - mana restoran [Asam Pedas Claypot Shekeen @ Ngopi Larkin](restaurant_name)?
+    - ada tk kedai makan [369 Rumah Lok Lok](restaurant_name)
+    - kedai makan [369 Rumah Lok Lok](restaurant_name) kt mana?
+    - mana kedai makan [369 Rumah Lok Lok](restaurant_name)?
+    - ada tk restoran [369 Rumah Lok Lok](restaurant_name)
+    - restoran [369 Rumah Lok Lok](restaurant_name) kt mana?
+    - mana restoran [369 Rumah Lok Lok](restaurant_name)?
+    - ada tk kedai makan [Ayam Gepuk Top Global Larkin](restaurant_name)
+    - kedai makan [Ayam Gepuk Top Global Larkin](restaurant_name) kt mana?
+    - mana kedai makan [Ayam Gepuk Top Global Larkin](restaurant_name)?
+    - ada tk restoran [Ayam Gepuk Top Global Larkin](restaurant_name)
+    - restoran [Ayam Gepuk Top Global Larkin](restaurant_name) kt mana?
+    - mana restoran [Ayam Gepuk Top Global Larkin](restaurant_name)?
+    - ada tk kedai makan [Loaf Adam Patisserie](restaurant_name)
+    - kedai makan [Loaf Adam Patisserie](restaurant_name) kt mana?
+    - mana kedai makan [Loaf Adam Patisserie](restaurant_name)?
+    - ada tk restoran [Loaf Adam Patisserie](restaurant_name)
+    - restoran [Loaf Adam Patisserie](restaurant_name) kt mana?
+    - mana restoran [Loaf Adam Patisserie](restaurant_name)?
+    - ada tk kedai makan [Warung Boyan Larkin](restaurant_name)
+    - kedai makan [Warung Boyan Larkin](restaurant_name) kt mana?
+    - mana kedai makan [Warung Boyan Larkin](restaurant_name)?
+    - ada tk restoran [Warung Boyan Larkin](restaurant_name)
+    - restoran [Warung Boyan Larkin](restaurant_name) kt mana?
+    - mana restoran [Warung Boyan Larkin](restaurant_name)?
+    - ada tk kedai makan [Thamada Village Restaurant](restaurant_name)
+    - kedai makan [Thamada Village Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Thamada Village Restaurant](restaurant_name)?
+    - ada tk restoran [Thamada Village Restaurant](restaurant_name)
+    - restoran [Thamada Village Restaurant](restaurant_name) kt mana?
+    - mana restoran [Thamada Village Restaurant](restaurant_name)?
+    - ada tk kedai makan [Zaituna (Shawarma) Restaurant](restaurant_name)
+    - kedai makan [Zaituna (Shawarma) Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Zaituna (Shawarma) Restaurant](restaurant_name)?
+    - ada tk restoran [Zaituna (Shawarma) Restaurant](restaurant_name)
+    - restoran [Zaituna (Shawarma) Restaurant](restaurant_name) kt mana?
+    - mana restoran [Zaituna (Shawarma) Restaurant](restaurant_name)?
+    - ada tk kedai makan [JIBRIL JB](restaurant_name)
+    - kedai makan [JIBRIL JB](restaurant_name) kt mana?
+    - mana kedai makan [JIBRIL JB](restaurant_name)?
+    - ada tk restoran [JIBRIL JB](restaurant_name)
+    - restoran [JIBRIL JB](restaurant_name) kt mana?
+    - mana restoran [JIBRIL JB](restaurant_name)?
+    - ada tk kedai makan [IT Roo Café](restaurant_name)
+    - kedai makan [IT Roo Café](restaurant_name) kt mana?
+    - mana kedai makan [IT Roo Café](restaurant_name)?
+    - ada tk restoran [IT Roo Café](restaurant_name)
+    - restoran [IT Roo Café](restaurant_name) kt mana?
+    - mana restoran [IT Roo Café](restaurant_name)?
+    - ada tk kedai makan [The Pinggan Cafe Johor Bahru](restaurant_name)
+    - kedai makan [The Pinggan Cafe Johor Bahru](restaurant_name) kt mana?
+    - mana kedai makan [The Pinggan Cafe Johor Bahru](restaurant_name)?
+    - ada tk restoran [The Pinggan Cafe Johor Bahru](restaurant_name)
+    - restoran [The Pinggan Cafe Johor Bahru](restaurant_name) kt mana?
+    - mana restoran [The Pinggan Cafe Johor Bahru](restaurant_name)?
+    - ada tk kedai makan [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name)
+    - kedai makan [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name) kt mana?
+    - mana kedai makan [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name)?
+    - ada tk restoran [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name)
+    - restoran [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name) kt mana?
+    - mana restoran [Md Nor Sup Gearbox (Alas Meja Pink) Taman Sri Bahagia](restaurant_name)?
+    - ada tk kedai makan [JB SOD](restaurant_name)
+    - kedai makan [JB SOD](restaurant_name) kt mana?
+    - mana kedai makan [JB SOD](restaurant_name)?
+    - ada tk restoran [JB SOD](restaurant_name)
+    - restoran [JB SOD](restaurant_name) kt mana?
+    - mana restoran [JB SOD](restaurant_name)?
+    - ada tk kedai makan [Tomyam Chiang Mai](restaurant_name)
+    - kedai makan [Tomyam Chiang Mai](restaurant_name) kt mana?
+    - mana kedai makan [Tomyam Chiang Mai](restaurant_name)?
+    - ada tk restoran [Tomyam Chiang Mai](restaurant_name)
+    - restoran [Tomyam Chiang Mai](restaurant_name) kt mana?
+    - mana restoran [Tomyam Chiang Mai](restaurant_name)?
+    - ada tk kedai makan [D'Penyetz Bandar Baru Uda](restaurant_name)
+    - kedai makan [D'Penyetz Bandar Baru Uda](restaurant_name) kt mana?
+    - mana kedai makan [D'Penyetz Bandar Baru Uda](restaurant_name)?
+    - ada tk restoran [D'Penyetz Bandar Baru Uda](restaurant_name)
+    - restoran [D'Penyetz Bandar Baru Uda](restaurant_name) kt mana?
+    - mana restoran [D'Penyetz Bandar Baru Uda](restaurant_name)?
+    - ada tk kedai makan [Port Black Cafe](restaurant_name)
+    - kedai makan [Port Black Cafe](restaurant_name) kt mana?
+    - mana kedai makan [Port Black Cafe](restaurant_name)?
+    - ada tk restoran [Port Black Cafe](restaurant_name)
+    - restoran [Port Black Cafe](restaurant_name) kt mana?
+    - mana restoran [Port Black Cafe](restaurant_name)?
+    - ada tk kedai makan [Kanteen 31 B5](restaurant_name)
+    - kedai makan [Kanteen 31 B5](restaurant_name) kt mana?
+    - mana kedai makan [Kanteen 31 B5](restaurant_name)?
+    - ada tk restoran [Kanteen 31 B5](restaurant_name)
+    - restoran [Kanteen 31 B5](restaurant_name) kt mana?
+    - mana restoran [Kanteen 31 B5](restaurant_name)?
+    - ada tk kedai makan [Restoran KD](restaurant_name)
+    - kedai makan [Restoran KD](restaurant_name) kt mana?
+    - mana kedai makan [Restoran KD](restaurant_name)?
+    - ada tk restoran [Restoran KD](restaurant_name)
+    - restoran [Restoran KD](restaurant_name) kt mana?
+    - mana restoran [Restoran KD](restaurant_name)?
+    - ada tk kedai makan [Warung Otai JDT](restaurant_name)
+    - kedai makan [Warung Otai JDT](restaurant_name) kt mana?
+    - mana kedai makan [Warung Otai JDT](restaurant_name)?
+    - ada tk restoran [Warung Otai JDT](restaurant_name)
+    - restoran [Warung Otai JDT](restaurant_name) kt mana?
+    - mana restoran [Warung Otai JDT](restaurant_name)?
+    - ada tk kedai makan [Roti Canai Sarang Burung Desa Rahmat](restaurant_name)
+    - kedai makan [Roti Canai Sarang Burung Desa Rahmat](restaurant_name) kt mana?
+    - mana kedai makan [Roti Canai Sarang Burung Desa Rahmat](restaurant_name)?
+    - ada tk restoran [Roti Canai Sarang Burung Desa Rahmat](restaurant_name)
+    - restoran [Roti Canai Sarang Burung Desa Rahmat](restaurant_name) kt mana?
+    - mana restoran [Roti Canai Sarang Burung Desa Rahmat](restaurant_name)?
+    - ada tk kedai makan [Cafe Bistro ZL](restaurant_name)
+    - kedai makan [Cafe Bistro ZL](restaurant_name) kt mana?
+    - mana kedai makan [Cafe Bistro ZL](restaurant_name)?
+    - ada tk restoran [Cafe Bistro ZL](restaurant_name)
+    - restoran [Cafe Bistro ZL](restaurant_name) kt mana?
+    - mana restoran [Cafe Bistro ZL](restaurant_name)?
+    - ada tk kedai makan [Medan Selera Rahmat BBU](restaurant_name)
+    - kedai makan [Medan Selera Rahmat BBU](restaurant_name) kt mana?
+    - mana kedai makan [Medan Selera Rahmat BBU](restaurant_name)?
+    - ada tk restoran [Medan Selera Rahmat BBU](restaurant_name)
+    - restoran [Medan Selera Rahmat BBU](restaurant_name) kt mana?
+    - mana restoran [Medan Selera Rahmat BBU](restaurant_name)?
+    - ada tk kedai makan [Din Seafood@Yongtauhu](restaurant_name)
+    - kedai makan [Din Seafood@Yongtauhu](restaurant_name) kt mana?
+    - mana kedai makan [Din Seafood@Yongtauhu](restaurant_name)?
+    - ada tk restoran [Din Seafood@Yongtauhu](restaurant_name)
+    - restoran [Din Seafood@Yongtauhu](restaurant_name) kt mana?
+    - mana restoran [Din Seafood@Yongtauhu](restaurant_name)?
+    - ada tk kedai makan [Syurga Dessert Taman Damansara Aliff](restaurant_name)
+    - kedai makan [Syurga Dessert Taman Damansara Aliff](restaurant_name) kt mana?
+    - mana kedai makan [Syurga Dessert Taman Damansara Aliff](restaurant_name)?
+    - ada tk restoran [Syurga Dessert Taman Damansara Aliff](restaurant_name)
+    - restoran [Syurga Dessert Taman Damansara Aliff](restaurant_name) kt mana?
+    - mana restoran [Syurga Dessert Taman Damansara Aliff](restaurant_name)?
+    - ada tk kedai makan [Toasty JB](restaurant_name)
+    - kedai makan [Toasty JB](restaurant_name) kt mana?
+    - mana kedai makan [Toasty JB](restaurant_name)?
+    - ada tk restoran [Toasty JB](restaurant_name)
+    - restoran [Toasty JB](restaurant_name) kt mana?
+    - mana restoran [Toasty JB](restaurant_name)?
+    - ada tk kedai makan [Kraezy Coffee Damansara Aliff](restaurant_name)
+    - kedai makan [Kraezy Coffee Damansara Aliff](restaurant_name) kt mana?
+    - mana kedai makan [Kraezy Coffee Damansara Aliff](restaurant_name)?
+    - ada tk restoran [Kraezy Coffee Damansara Aliff](restaurant_name)
+    - restoran [Kraezy Coffee Damansara Aliff](restaurant_name) kt mana?
+    - mana restoran [Kraezy Coffee Damansara Aliff](restaurant_name)?
+    - ada tk kedai makan [Badai Ikan Bakar](restaurant_name)
+    - kedai makan [Badai Ikan Bakar](restaurant_name) kt mana?
+    - mana kedai makan [Badai Ikan Bakar](restaurant_name)?
+    - ada tk restoran [Badai Ikan Bakar](restaurant_name)
+    - restoran [Badai Ikan Bakar](restaurant_name) kt mana?
+    - mana restoran [Badai Ikan Bakar](restaurant_name)?
+    - ada tk kedai makan [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name)
+    - kedai makan [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name)?
+    - ada tk restoran [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name)
+    - restoran [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name) kt mana?
+    - mana restoran [Restoran Nasi Kandar Al Siddiq Maju](restaurant_name)?
+    - ada tk kedai makan [Wadihana Islamic Steakhouse](restaurant_name)
+    - kedai makan [Wadihana Islamic Steakhouse](restaurant_name) kt mana?
+    - mana kedai makan [Wadihana Islamic Steakhouse](restaurant_name)?
+    - ada tk restoran [Wadihana Islamic Steakhouse](restaurant_name)
+    - restoran [Wadihana Islamic Steakhouse](restaurant_name) kt mana?
+    - mana restoran [Wadihana Islamic Steakhouse](restaurant_name)?
+    - ada tk kedai makan [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name)
+    - kedai makan [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name) kt mana?
+    - mana kedai makan [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name)?
+    - ada tk restoran [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name)
+    - restoran [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name) kt mana?
+    - mana restoran [Restoran ZZ Sup Tulang Damansara Aliff](restaurant_name)?
+    - ada tk kedai makan [Restoran Al Falah 23 Jam](restaurant_name)
+    - kedai makan [Restoran Al Falah 23 Jam](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Al Falah 23 Jam](restaurant_name)?
+    - ada tk restoran [Restoran Al Falah 23 Jam](restaurant_name)
+    - restoran [Restoran Al Falah 23 Jam](restaurant_name) kt mana?
+    - mana restoran [Restoran Al Falah 23 Jam](restaurant_name)?
+    - ada tk kedai makan [Restoran Ummi Kitchen](restaurant_name)
+    - kedai makan [Restoran Ummi Kitchen](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Ummi Kitchen](restaurant_name)?
+    - ada tk restoran [Restoran Ummi Kitchen](restaurant_name)
+    - restoran [Restoran Ummi Kitchen](restaurant_name) kt mana?
+    - mana restoran [Restoran Ummi Kitchen](restaurant_name)?
+    - ada tk kedai makan [Abu & Co Bukit Aliff](restaurant_name)
+    - kedai makan [Abu & Co Bukit Aliff](restaurant_name) kt mana?
+    - mana kedai makan [Abu & Co Bukit Aliff](restaurant_name)?
+    - ada tk restoran [Abu & Co Bukit Aliff](restaurant_name)
+    - restoran [Abu & Co Bukit Aliff](restaurant_name) kt mana?
+    - mana restoran [Abu & Co Bukit Aliff](restaurant_name)?
+    - ada tk kedai makan [The Sam's Cafe](restaurant_name)
+    - kedai makan [The Sam's Cafe](restaurant_name) kt mana?
+    - mana kedai makan [The Sam's Cafe](restaurant_name)?
+    - ada tk restoran [The Sam's Cafe](restaurant_name)
+    - restoran [The Sam's Cafe](restaurant_name) kt mana?
+    - mana restoran [The Sam's Cafe](restaurant_name)?
+    - ada tk kedai makan [Richiamo Coffee Damansara Aliff](restaurant_name)
+    - kedai makan [Richiamo Coffee Damansara Aliff](restaurant_name) kt mana?
+    - mana kedai makan [Richiamo Coffee Damansara Aliff](restaurant_name)?
+    - ada tk restoran [Richiamo Coffee Damansara Aliff](restaurant_name)
+    - restoran [Richiamo Coffee Damansara Aliff](restaurant_name) kt mana?
+    - mana restoran [Richiamo Coffee Damansara Aliff](restaurant_name)?
+    - ada tk kedai makan [Warung Roti Canai Agil](restaurant_name)
+    - kedai makan [Warung Roti Canai Agil](restaurant_name) kt mana?
+    - mana kedai makan [Warung Roti Canai Agil](restaurant_name)?
+    - ada tk restoran [Warung Roti Canai Agil](restaurant_name)
+    - restoran [Warung Roti Canai Agil](restaurant_name) kt mana?
+    - mana restoran [Warung Roti Canai Agil](restaurant_name)?
+    - ada tk kedai makan [Warung Man Mak Ram](restaurant_name)
+    - kedai makan [Warung Man Mak Ram](restaurant_name) kt mana?
+    - mana kedai makan [Warung Man Mak Ram](restaurant_name)?
+    - ada tk restoran [Warung Man Mak Ram](restaurant_name)
+    - restoran [Warung Man Mak Ram](restaurant_name) kt mana?
+    - mana restoran [Warung Man Mak Ram](restaurant_name)?
+    - ada tk kedai makan [Warung Siput Sedut Wak Dol](restaurant_name)
+    - kedai makan [Warung Siput Sedut Wak Dol](restaurant_name) kt mana?
+    - mana kedai makan [Warung Siput Sedut Wak Dol](restaurant_name)?
+    - ada tk restoran [Warung Siput Sedut Wak Dol](restaurant_name)
+    - restoran [Warung Siput Sedut Wak Dol](restaurant_name) kt mana?
+    - mana restoran [Warung Siput Sedut Wak Dol](restaurant_name)?
+    - ada tk kedai makan [Warung Soto Mak Mok](restaurant_name)
+    - kedai makan [Warung Soto Mak Mok](restaurant_name) kt mana?
+    - mana kedai makan [Warung Soto Mak Mok](restaurant_name)?
+    - ada tk restoran [Warung Soto Mak Mok](restaurant_name)
+    - restoran [Warung Soto Mak Mok](restaurant_name) kt mana?
+    - mana restoran [Warung Soto Mak Mok](restaurant_name)?
+    - ada tk kedai makan [The Morso Restaurant](restaurant_name)
+    - kedai makan [The Morso Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [The Morso Restaurant](restaurant_name)?
+    - ada tk restoran [The Morso Restaurant](restaurant_name)
+    - restoran [The Morso Restaurant](restaurant_name) kt mana?
+    - mana restoran [The Morso Restaurant](restaurant_name)?
+    - ada tk kedai makan [Sudut Selera Sri Cempaka](restaurant_name)
+    - kedai makan [Sudut Selera Sri Cempaka](restaurant_name) kt mana?
+    - mana kedai makan [Sudut Selera Sri Cempaka](restaurant_name)?
+    - ada tk restoran [Sudut Selera Sri Cempaka](restaurant_name)
+    - restoran [Sudut Selera Sri Cempaka](restaurant_name) kt mana?
+    - mana restoran [Sudut Selera Sri Cempaka](restaurant_name)?
+    - ada tk kedai makan [Restoran Smokd JB](restaurant_name)
+    - kedai makan [Restoran Smokd JB](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Smokd JB](restaurant_name)?
+    - ada tk restoran [Restoran Smokd JB](restaurant_name)
+    - restoran [Restoran Smokd JB](restaurant_name) kt mana?
+    - mana restoran [Restoran Smokd JB](restaurant_name)?
+    - ada tk kedai makan [Restoran Shells & Fins](restaurant_name)
+    - kedai makan [Restoran Shells & Fins](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Shells & Fins](restaurant_name)?
+    - ada tk restoran [Restoran Shells & Fins](restaurant_name)
+    - restoran [Restoran Shells & Fins](restaurant_name) kt mana?
+    - mana restoran [Restoran Shells & Fins](restaurant_name)?
+    - ada tk kedai makan [Selera Padi Emas](restaurant_name)
+    - kedai makan [Selera Padi Emas](restaurant_name) kt mana?
+    - mana kedai makan [Selera Padi Emas](restaurant_name)?
+    - ada tk restoran [Selera Padi Emas](restaurant_name)
+    - restoran [Selera Padi Emas](restaurant_name) kt mana?
+    - mana restoran [Selera Padi Emas](restaurant_name)?
+    - ada tk kedai makan [Satay Club](restaurant_name)
+    - kedai makan [Satay Club](restaurant_name) kt mana?
+    - mana kedai makan [Satay Club](restaurant_name)?
+    - ada tk restoran [Satay Club](restaurant_name)
+    - restoran [Satay Club](restaurant_name) kt mana?
+    - mana restoran [Satay Club](restaurant_name)?
+    - ada tk kedai makan [Restoran Rotiffee](restaurant_name)
+    - kedai makan [Restoran Rotiffee](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Rotiffee](restaurant_name)?
+    - ada tk restoran [Restoran Rotiffee](restaurant_name)
+    - restoran [Restoran Rotiffee](restaurant_name) kt mana?
+    - mana restoran [Restoran Rotiffee](restaurant_name)?
+    - ada tk kedai makan [The M Restaurant](restaurant_name)
+    - kedai makan [The M Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [The M Restaurant](restaurant_name)?
+    - ada tk restoran [The M Restaurant](restaurant_name)
+    - restoran [The M Restaurant](restaurant_name) kt mana?
+    - mana restoran [The M Restaurant](restaurant_name)?
+    - ada tk kedai makan [Restoran Sirap Selasih](restaurant_name)
+    - kedai makan [Restoran Sirap Selasih](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Sirap Selasih](restaurant_name)?
+    - ada tk restoran [Restoran Sirap Selasih](restaurant_name)
+    - restoran [Restoran Sirap Selasih](restaurant_name) kt mana?
+    - mana restoran [Restoran Sirap Selasih](restaurant_name)?
+    - ada tk kedai makan [Remaja Seafood Restaurant](restaurant_name)
+    - kedai makan [Remaja Seafood Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Remaja Seafood Restaurant](restaurant_name)?
+    - ada tk restoran [Remaja Seafood Restaurant](restaurant_name)
+    - restoran [Remaja Seafood Restaurant](restaurant_name) kt mana?
+    - mana restoran [Remaja Seafood Restaurant](restaurant_name)?
+    - ada tk kedai makan [Restoran Osman](restaurant_name)
+    - kedai makan [Restoran Osman](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Osman](restaurant_name)?
+    - ada tk restoran [Restoran Osman](restaurant_name)
+    - restoran [Restoran Osman](restaurant_name) kt mana?
+    - mana restoran [Restoran Osman](restaurant_name)?
+    - ada tk kedai makan [Restoran Mood Degil](restaurant_name)
+    - kedai makan [Restoran Mood Degil](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Mood Degil](restaurant_name)?
+    - ada tk restoran [Restoran Mood Degil](restaurant_name)
+    - restoran [Restoran Mood Degil](restaurant_name) kt mana?
+    - mana restoran [Restoran Mood Degil](restaurant_name)?
+    - ada tk kedai makan [Restoran Mana Lagi](restaurant_name)
+    - kedai makan [Restoran Mana Lagi](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Mana Lagi](restaurant_name)?
+    - ada tk restoran [Restoran Mana Lagi](restaurant_name)
+    - restoran [Restoran Mana Lagi](restaurant_name) kt mana?
+    - mana restoran [Restoran Mana Lagi](restaurant_name)?
+    - ada tk kedai makan [Restoran Lubuk Selera Uda](restaurant_name)
+    - kedai makan [Restoran Lubuk Selera Uda](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Lubuk Selera Uda](restaurant_name)?
+    - ada tk restoran [Restoran Lubuk Selera Uda](restaurant_name)
+    - restoran [Restoran Lubuk Selera Uda](restaurant_name) kt mana?
+    - mana restoran [Restoran Lubuk Selera Uda](restaurant_name)?
+    - ada tk kedai makan [Restoran Kuali Panas](restaurant_name)
+    - kedai makan [Restoran Kuali Panas](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Kuali Panas](restaurant_name)?
+    - ada tk restoran [Restoran Kuali Panas](restaurant_name)
+    - restoran [Restoran Kuali Panas](restaurant_name) kt mana?
+    - mana restoran [Restoran Kuali Panas](restaurant_name)?
+    - ada tk kedai makan [Restoran Habib](restaurant_name)
+    - kedai makan [Restoran Habib](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Habib](restaurant_name)?
+    - ada tk restoran [Restoran Habib](restaurant_name)
+    - restoran [Restoran Habib](restaurant_name) kt mana?
+    - mana restoran [Restoran Habib](restaurant_name)?
+    - ada tk kedai makan [Full Tank Bandar Baru Uda](restaurant_name)
+    - kedai makan [Full Tank Bandar Baru Uda](restaurant_name) kt mana?
+    - mana kedai makan [Full Tank Bandar Baru Uda](restaurant_name)?
+    - ada tk restoran [Full Tank Bandar Baru Uda](restaurant_name)
+    - restoran [Full Tank Bandar Baru Uda](restaurant_name) kt mana?
+    - mana restoran [Full Tank Bandar Baru Uda](restaurant_name)?
+    - ada tk kedai makan [Restoran Anjung Selatan](restaurant_name)
+    - kedai makan [Restoran Anjung Selatan](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Anjung Selatan](restaurant_name)?
+    - ada tk restoran [Restoran Anjung Selatan](restaurant_name)
+    - restoran [Restoran Anjung Selatan](restaurant_name) kt mana?
+    - mana restoran [Restoran Anjung Selatan](restaurant_name)?
+    - ada tk kedai makan [Restoran Al Safa BBU](restaurant_name)
+    - kedai makan [Restoran Al Safa BBU](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Al Safa BBU](restaurant_name)?
+    - ada tk restoran [Restoran Al Safa BBU](restaurant_name)
+    - restoran [Restoran Al Safa BBU](restaurant_name) kt mana?
+    - mana restoran [Restoran Al Safa BBU](restaurant_name)?
+    - ada tk kedai makan [Restoran Wadi Hana Elarabi](restaurant_name)
+    - kedai makan [Restoran Wadi Hana Elarabi](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Wadi Hana Elarabi](restaurant_name)?
+    - ada tk restoran [Restoran Wadi Hana Elarabi](restaurant_name)
+    - restoran [Restoran Wadi Hana Elarabi](restaurant_name) kt mana?
+    - mana restoran [Restoran Wadi Hana Elarabi](restaurant_name)?
+    - ada tk kedai makan [Pondok M&S Beriani](restaurant_name)
+    - kedai makan [Pondok M&S Beriani](restaurant_name) kt mana?
+    - mana kedai makan [Pondok M&S Beriani](restaurant_name)?
+    - ada tk restoran [Pondok M&S Beriani](restaurant_name)
+    - restoran [Pondok M&S Beriani](restaurant_name) kt mana?
+    - mana restoran [Pondok M&S Beriani](restaurant_name)?
+    - ada tk kedai makan [Nasi Ambang Mak Ana](restaurant_name)
+    - kedai makan [Nasi Ambang Mak Ana](restaurant_name) kt mana?
+    - mana kedai makan [Nasi Ambang Mak Ana](restaurant_name)?
+    - ada tk restoran [Nasi Ambang Mak Ana](restaurant_name)
+    - restoran [Nasi Ambang Mak Ana](restaurant_name) kt mana?
+    - mana restoran [Nasi Ambang Mak Ana](restaurant_name)?
+    - ada tk kedai makan [Murtabak Kechik Prata](restaurant_name)
+    - kedai makan [Murtabak Kechik Prata](restaurant_name) kt mana?
+    - mana kedai makan [Murtabak Kechik Prata](restaurant_name)?
+    - ada tk restoran [Murtabak Kechik Prata](restaurant_name)
+    - restoran [Murtabak Kechik Prata](restaurant_name) kt mana?
+    - mana restoran [Murtabak Kechik Prata](restaurant_name)?
+    - ada tk kedai makan [Restoran Miafin Coffee](restaurant_name)
+    - kedai makan [Restoran Miafin Coffee](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Miafin Coffee](restaurant_name)?
+    - ada tk restoran [Restoran Miafin Coffee](restaurant_name)
+    - restoran [Restoran Miafin Coffee](restaurant_name) kt mana?
+    - mana restoran [Restoran Miafin Coffee](restaurant_name)?
+    - ada tk kedai makan [Restoran Mesra Nasi Padang](restaurant_name)
+    - kedai makan [Restoran Mesra Nasi Padang](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Mesra Nasi Padang](restaurant_name)?
+    - ada tk restoran [Restoran Mesra Nasi Padang](restaurant_name)
+    - restoran [Restoran Mesra Nasi Padang](restaurant_name) kt mana?
+    - mana restoran [Restoran Mesra Nasi Padang](restaurant_name)?
+    - ada tk kedai makan [Melor & Co](restaurant_name)
+    - kedai makan [Melor & Co](restaurant_name) kt mana?
+    - mana kedai makan [Melor & Co](restaurant_name)?
+    - ada tk restoran [Melor & Co](restaurant_name)
+    - restoran [Melor & Co](restaurant_name) kt mana?
+    - mana restoran [Melor & Co](restaurant_name)?
+    - ada tk kedai makan [Mat Corner Nasi Ambang](restaurant_name)
+    - kedai makan [Mat Corner Nasi Ambang](restaurant_name) kt mana?
+    - mana kedai makan [Mat Corner Nasi Ambang](restaurant_name)?
+    - ada tk restoran [Mat Corner Nasi Ambang](restaurant_name)
+    - restoran [Mat Corner Nasi Ambang](restaurant_name) kt mana?
+    - mana restoran [Mat Corner Nasi Ambang](restaurant_name)?
+    - ada tk kedai makan [Man Prata MP Cafe](restaurant_name)
+    - kedai makan [Man Prata MP Cafe](restaurant_name) kt mana?
+    - mana kedai makan [Man Prata MP Cafe](restaurant_name)?
+    - ada tk restoran [Man Prata MP Cafe](restaurant_name)
+    - restoran [Man Prata MP Cafe](restaurant_name) kt mana?
+    - mana restoran [Man Prata MP Cafe](restaurant_name)?
+    - ada tk kedai makan [Kraezy Coffee Bandar Baru Uda](restaurant_name)
+    - kedai makan [Kraezy Coffee Bandar Baru Uda](restaurant_name) kt mana?
+    - mana kedai makan [Kraezy Coffee Bandar Baru Uda](restaurant_name)?
+    - ada tk restoran [Kraezy Coffee Bandar Baru Uda](restaurant_name)
+    - restoran [Kraezy Coffee Bandar Baru Uda](restaurant_name) kt mana?
+    - mana restoran [Kraezy Coffee Bandar Baru Uda](restaurant_name)?
+    - ada tk kedai makan [Restoran Grand Chicken Rice](restaurant_name)
+    - kedai makan [Restoran Grand Chicken Rice](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Grand Chicken Rice](restaurant_name)?
+    - ada tk restoran [Restoran Grand Chicken Rice](restaurant_name)
+    - restoran [Restoran Grand Chicken Rice](restaurant_name) kt mana?
+    - mana restoran [Restoran Grand Chicken Rice](restaurant_name)?
+    - ada tk kedai makan [Gerai Kak Yah Nasi Kerabu](restaurant_name)
+    - kedai makan [Gerai Kak Yah Nasi Kerabu](restaurant_name) kt mana?
+    - mana kedai makan [Gerai Kak Yah Nasi Kerabu](restaurant_name)?
+    - ada tk restoran [Gerai Kak Yah Nasi Kerabu](restaurant_name)
+    - restoran [Gerai Kak Yah Nasi Kerabu](restaurant_name) kt mana?
+    - mana restoran [Gerai Kak Yah Nasi Kerabu](restaurant_name)?
+    - ada tk kedai makan [Gerai Hajah Rabiah](restaurant_name)
+    - kedai makan [Gerai Hajah Rabiah](restaurant_name) kt mana?
+    - mana kedai makan [Gerai Hajah Rabiah](restaurant_name)?
+    - ada tk restoran [Gerai Hajah Rabiah](restaurant_name)
+    - restoran [Gerai Hajah Rabiah](restaurant_name) kt mana?
+    - mana restoran [Gerai Hajah Rabiah](restaurant_name)?
+    - ada tk kedai makan [Gerai Cik Gunong](restaurant_name)
+    - kedai makan [Gerai Cik Gunong](restaurant_name) kt mana?
+    - mana kedai makan [Gerai Cik Gunong](restaurant_name)?
+    - ada tk restoran [Gerai Cik Gunong](restaurant_name)
+    - restoran [Gerai Cik Gunong](restaurant_name) kt mana?
+    - mana restoran [Gerai Cik Gunong](restaurant_name)?
+    - ada tk kedai makan [Gerai Bu Yati Ayam Penyet](restaurant_name)
+    - kedai makan [Gerai Bu Yati Ayam Penyet](restaurant_name) kt mana?
+    - mana kedai makan [Gerai Bu Yati Ayam Penyet](restaurant_name)?
+    - ada tk restoran [Gerai Bu Yati Ayam Penyet](restaurant_name)
+    - restoran [Gerai Bu Yati Ayam Penyet](restaurant_name) kt mana?
+    - mana restoran [Gerai Bu Yati Ayam Penyet](restaurant_name)?
+    - ada tk kedai makan [Eaterz Restaurant](restaurant_name)
+    - kedai makan [Eaterz Restaurant](restaurant_name) kt mana?
+    - mana kedai makan [Eaterz Restaurant](restaurant_name)?
+    - ada tk restoran [Eaterz Restaurant](restaurant_name)
+    - restoran [Eaterz Restaurant](restaurant_name) kt mana?
+    - mana restoran [Eaterz Restaurant](restaurant_name)?
+    - ada tk kedai makan [D Kelapa Cafe](restaurant_name)
+    - kedai makan [D Kelapa Cafe](restaurant_name) kt mana?
+    - mana kedai makan [D Kelapa Cafe](restaurant_name)?
+    - ada tk restoran [D Kelapa Cafe](restaurant_name)
+    - restoran [D Kelapa Cafe](restaurant_name) kt mana?
+    - mana restoran [D Kelapa Cafe](restaurant_name)?
+    - ada tk kedai makan [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name)
+    - kedai makan [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name)?
+    - ada tk restoran [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name)
+    - restoran [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name) kt mana?
+    - mana restoran [Restoran Chamek Kopitiam Bandar Baru Uda](restaurant_name)?
+    - ada tk kedai makan [Restoran Butter & Kreme](restaurant_name)
+    - kedai makan [Restoran Butter & Kreme](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Butter & Kreme](restaurant_name)?
+    - ada tk restoran [Restoran Butter & Kreme](restaurant_name)
+    - restoran [Restoran Butter & Kreme](restaurant_name) kt mana?
+    - mana restoran [Restoran Butter & Kreme](restaurant_name)?
+    - ada tk kedai makan [BURRTEMU CAFE](restaurant_name)
+    - kedai makan [BURRTEMU CAFE](restaurant_name) kt mana?
+    - mana kedai makan [BURRTEMU CAFE](restaurant_name)?
+    - ada tk restoran [BURRTEMU CAFE](restaurant_name)
+    - restoran [BURRTEMU CAFE](restaurant_name) kt mana?
+    - mana restoran [BURRTEMU CAFE](restaurant_name)?
+    - ada tk kedai makan [Asam Pedas House](restaurant_name)
+    - kedai makan [Asam Pedas House](restaurant_name) kt mana?
+    - mana kedai makan [Asam Pedas House](restaurant_name)?
+    - ada tk restoran [Asam Pedas House](restaurant_name)
+    - restoran [Asam Pedas House](restaurant_name) kt mana?
+    - mana restoran [Asam Pedas House](restaurant_name)?
+    - ada tk kedai makan [Asam Pedas D Desa Rahmat](restaurant_name)
+    - kedai makan [Asam Pedas D Desa Rahmat](restaurant_name) kt mana?
+    - mana kedai makan [Asam Pedas D Desa Rahmat](restaurant_name)?
+    - ada tk restoran [Asam Pedas D Desa Rahmat](restaurant_name)
+    - restoran [Asam Pedas D Desa Rahmat](restaurant_name) kt mana?
+    - mana restoran [Asam Pedas D Desa Rahmat](restaurant_name)?
+    - ada tk kedai makan [Almizan Satay House BBU](restaurant_name)
+    - kedai makan [Almizan Satay House BBU](restaurant_name) kt mana?
+    - mana kedai makan [Almizan Satay House BBU](restaurant_name)?
+    - ada tk restoran [Almizan Satay House BBU](restaurant_name)
+    - restoran [Almizan Satay House BBU](restaurant_name) kt mana?
+    - mana restoran [Almizan Satay House BBU](restaurant_name)?
+    - ada tk kedai makan [Restoran Abbu Bakar](restaurant_name)
+    - kedai makan [Restoran Abbu Bakar](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Abbu Bakar](restaurant_name)?
+    - ada tk restoran [Restoran Abbu Bakar](restaurant_name)
+    - restoran [Restoran Abbu Bakar](restaurant_name) kt mana?
+    - mana restoran [Restoran Abbu Bakar](restaurant_name)?
+    - ada tk kedai makan [Restoran Abah Beriani House](restaurant_name)
+    - kedai makan [Restoran Abah Beriani House](restaurant_name) kt mana?
+    - mana kedai makan [Restoran Abah Beriani House](restaurant_name)?
+    - ada tk restoran [Restoran Abah Beriani House](restaurant_name)
+    - restoran [Restoran Abah Beriani House](restaurant_name) kt mana?
+    - mana restoran [Restoran Abah Beriani House](restaurant_name)?
+    
+
+- intent: ask_restaurant_near_my
+  examples: |
+    - Restoran apa yang ada dekat [Pasir Gudang](area)?
+    - Restoran apa yg ada kat [Pasir Gudang](area)?
+    - kedai makan apa yg ada kat [Pasir Gudang](area)?
+    - kedai makan apa yg ada dekat [Pasir Gudang](area)?
+    - kedai makan kt [larkin](area)?
+    - kedai makankat [Bandar Baru Uda](area)?
+    - Tempat makan area kt [Kampung Pasit tampoi](area)?
+    - kedai makan de [Kampung Nong Chik](area).
+    - Tempat makan berdekatan [Kempas baru](area).
+    - Tempat makan kt [Kampung Mohd Amin](area).
+    - Restoran apa yg ada kat [Kampung Sungai Danga](area)?
+    - kedai makan kt [Kempas baru](area)
+    - Restoran apa yang ada dekat [Taman Orkid](area)?
+    - Restoran apa yg ada kat [Taman Melodies](area)?
+    - kedai makan apa yg ada kat [Taman Abad](area)?
+    - kedai makan apa yg ada dekat [Johor Bahru](area)?
+    - kedai makan kt [Taman Kebun Teh](area)?
+    - kedai makan kt [Wadi Hana](area)?
+    - kedai makan dekat [Taman Tasek](area)?
+    - Tempat makan area [Taman Perling](area).
+    - Tempat makan berdekatan [Taman Suria Muafakat](area).
+    - Tempat makan kt [Kampung Bahru](area).
+    - Restoran apa yg ada kat [Taman Kenanga](area)?
+    - kedai makan kt [Taman Kemas](area)
+    - Restoran apa yang ada dekat [Taman Cempaka](area)?
+    - Restoran apa yg ada kat [Taman Melodies](area)?
+    - kedai makan apa yg ada kat [Taman Bukit Kempas](area)?
+    - kedai makan apa yg ada dekat [Taman Melati](area)?
+    - kedai makan kt [Larkin Jaya](area)?
+    - kedai makan kt [Taman Seroja](area)?
+    - kedai makan dekat [Bandar Baru Uda](area)?
+    - Tempat makan area [Kampung Bahru majidee](area).
+    - Tempat makan berdekatan [Taman Sri Bahagia](area).
+    - Tempat makan kt [Taman Damansara Aliff](area).
+    - Restoran apa yg ada kat [Taman Tampoi](area)?
+    - kedai makan kt [Taman Desa Rahmat](area)
+    - Restoran apa yang ada dekat [Taman Bukit Aliff](area)?
+    - Restoran apa yg ada kat [Kampung Pasir](area)?
+    - kedai makan apa yg ada kat [Kampung Pengkalan Rinting](area)?
+
+
+- intent: ask_openning_restaurant_my
+  examples: |
+    - kedai makan apa yg buka sekarng
+    - kedai mkn apa yg tgh buka skrg
+    - kedai mkn apa yg tgh buka skrg
+    - restoran yg buka sekarng
+    - restoran yg tgh buka skrg
+    - restoran apa yg tgh buka skrg
+
+- intent: ask_restaurant_foodtype_my
+  examples: |
+    - ada kedai makan [western](food_type) tk?
+    - ada kedai masakan [melayu](food_type)
+    - ada kedai masakan [cina](food_type)
+    - ada kedai masakan [india](food_type) tk?
+    - ada kedai [mamak](food_type) tk?
+    - cari kedai [mamak](food_type) tk?
+    - kedai apa yg ada masakan [melayu](food_type) 
+    - kedai apa yg ada masakan [cina](food_type) 
+    - kedai apa yg ada masakan [india](food_type)
+
+- intent: ask_restaurant_category_my
+  examples: |
+    - cari kedai makan untuk [dinner](restaurant_category)
+    - cari kedai makan untuk [lunch](restaurant_category)
+    - cari kedai makan untuk [breakfast](restaurant_category)
+    - cari restoran utk [dinner](restaurant_category)
+    - cari restoran utk [lunch](restaurant_category)
+    - cari restoran utk [breakfast](restaurant_category)
+    - cari kedai makan yg buka [24 jam](restaurant_category)
+    - cari restoran yg  buka [24 jam](restaurant_category)
+
+- intent: ask_restaurant_recommended
+  examples: |
+    - cari kedai makan sedap 
+    - cari kedai makan recommend
+    - suggest tempat makan sedap
+    - tempat makan best
+    
+
+- intent: dont_know_where_to_eat
+  examples: |
+    - lapar ni
+    - tak tau nk makan mana
+    - nak makan mana?
+    - carikan kedai makan
+    - carikan restoran
+    - cadangkan kedai makan
+
+- intent: inform
+  examples: |
+    - [Cina](food_type)
+    - [india](food_type)
+    - [Barat](food_type)
+    - [melayu](food_type)
+    - [mamak](food_type)
+    - [Larkin](area)
+    - [Johor Bahru](area)
+    - [Bandar Baru Uda](area)?
+    - [Kampung Pasit tampoi](area)?
+    - [Kampung Nong Chik](area).
+    - [Kempas baru](area).
+    - [Kampung Mohd Amin](area).
+    - [Kampung Sungai Danga](area)?
+    - [Kempas baru](area)
+    - [Taman Orkid](area)?
+    - [Taman Melodies](area)?
+    - [Taman Abad](area)?
+    - [Johor Bahru](area)?
+    - [johor bahru](area)?
+    - [Taman Kebun Teh](area)?
+    - [Wadi Hana](area)?
+    - [Taman Tasek](area)?
+    - [Taman Perling](area).
+    - [Taman Suria Muafakat](area).
+    - [Kampung Bahru](area).
+    - [Taman Kenanga](area)?
+    - [Taman Kemas](area)
+    - [Taman Cempaka](area)?
+    - [Taman Melodies](area)?
+    - [Taman Bukit Kempas](area)?
+    - [Taman Melati](area)?
+    - [Larkin Jaya](area)?
+    - [Taman Seroja](area)?
+    - [Bandar Baru Uda](area)?
+    - [Kampung Bahru majidee](area).
+    - [Taman Sri Bahagia](area).
+    - [Taman Damansara Aliff](area).
+    - [Taman Tampoi](area)?
+    - [Taman Desa Rahmat](area)
+    - [Taman Bukit Aliff](area)?
+    - [Kampung Pasir](area)?
+    - [Kampung Pengkalan Rinting](area)?    

@@ -1,0 +1,49 @@
+version: "3.1"
+
+rules:
+
+- rule: Reply to salam
+  steps:
+  - intent: salam
+  - action: utter_salam
+
+
+- rule: Say goodbye anytime the user says goodbye in English
+  steps:
+  - intent: goodbye_en
+  - action: utter_goodbye_en
+
+- rule: Say goodbye anytime the user says goodbye in Malay
+  steps:
+  - intent: goodbye_my
+  - action: utter_goodbye_my
+
+- rule: Say 'I am a bot' anytime the user challenges in English
+  steps:
+  - intent: bot_challenge_en
+  - action: utter_iamabot_en
+
+- rule: Say 'I am a bot' anytime the user challenges in Malay
+  steps:
+  - intent: bot_challenge_my
+  - action: utter_iamabot_my
+
+- rule: Start restaurant suggestion form
+  steps:
+    - intent: dont_know_where_to_eat
+    - action: restaurant_suggestion_form
+    - active_loop: restaurant_suggestion_form
+    
+- rule: Submit restaurant suggestion
+  condition:
+    - active_loop: restaurant_suggestion_form
+  steps:
+    - action: restaurant_suggestion_form
+    - active_loop: null
+    - action: action_suggest_restaurant
+
+
+- rule: Reply thanks
+  steps:
+    - intent: thanks_my
+    - action: utter_reply_thanks

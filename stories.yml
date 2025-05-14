@@ -1,0 +1,22 @@
+
+version: "3.1"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: ask_restaurant_near_my
+    entities:
+    - area: larkin
+  - slot_was_set:
+    - area: larkin
+  - slot_was_set:
+    - food_type: kedai makan area larkin
+  - action: action_find_restaurants_nearby
+  - intent: ask_restaurant_near_my
+    entities:
+    - area: Kampung Pasit tampoi
+  - slot_was_set:
+    - area: Kampung Pasit tampoi
+  - slot_was_set:
+    - food_type: kedai makan kt kampung pasit tampoi
+  - action: action_find_restaurants_nearby
+  - action: action_find_restaurants_nearby

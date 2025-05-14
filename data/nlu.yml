@@ -1,0 +1,213 @@
+version: "3.1"
+nlu:
+- intent: salam
+  examples: |
+    - assalamualaikum
+    - salam
+    - salamulaikum
+    - assalam
+    - Assalammualaikum
+- intent: greet_en
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+- intent: greet_my
+  examples: |
+    - hai
+    - selamat pagi
+    - selamat petang
+    - selamat tengah hari
+    - helo
+    - apa khabar
+- intent: goodbye_en
+  examples: |
+    - cu
+    - goodbye
+    - bye
+    - see you later
+    - good night
+    - have a nice day
+    - see you around
+    - bye bye
+    - Can you help me?
+    - Bye
+- intent: goodbye_my
+  examples: |
+    - jumpa lagi
+    - selamat tinggal
+    - sampai jumpa
+    - selamat malam
+    - semoga hari anda indah
+    - selamat berpisah
+- intent: affirm_en
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Y
+- intent: affirm_my
+  examples: |
+    - ya
+    - betul
+    - memang
+    - tentu sekali
+    - sudah pasti
+    - boleh
+    - okay
+- intent: deny_en
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: deny_my
+  examples: |
+    - tidak
+    - tak
+    - tidak sama sekali
+    - saya rasa tidak
+    - saya tidak suka itu
+    - tidak mungkin
+    - kurang setuju
+- intent: mood_great_en
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+- intent: mood_great_my
+  examples: |
+    - hebat
+    - luar biasa
+    - rasa macam raja
+    - sungguh menakjubkan
+    - saya rasa sangat baik
+    - saya rasa hebat
+    - saya luar biasa
+    - saya nak selamatkan dunia
+    - sangat teruja
+    - sangat bagus
+- intent: mood_unhappy_en
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+- intent: mood_unhappy_my
+  examples: |
+    - hari saya teruk
+    - saya sedih
+    - saya tidak rasa sihat
+    - saya kecewa
+    - sangat sedih
+    - saya sangat sedih
+    - sedih
+    - amat sedih
+    - tidak gembira
+    - tidak bagus
+- intent: bot_challenge_en
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - Who are you?
+- intent: bot_challenge_my
+  examples: |
+    - siapa awak?
+    - adakah anda robot?
+    - adakah anda manusia?
+    - adakah saya bercakap dengan robot?
+    - adakah saya bercakap dengan manusia?
+- intent: ask_death_today_en
+  examples: |
+    - any deaths today?
+    - who died today?
+    - death list today
+    - today's obituary news
+    - today's death list
+    - latest death news
+- intent: ask_death_today_my
+  examples: |
+    - ada kematian hari ini?
+    - siapa yang meninggal hari ini?
+    - senarai kematian hari ini
+    - berita kematian terkini
+    - berita orang meninggal hari ini
+    - senarai orang meninggal dunia hari ini
+    - Apa berita kematian harini?
+- intent: confirm_check_en
+  examples: |
+    - are you sure?
+    - really?
+    - sure or not?
+    - you sure?
+    - confirm?
+    - is it true?
+    - can I trust it?
+    - are you certain?
+- intent: confirm_check_my
+  examples: |
+    - betul ke?
+    - pasti ke?
+    - yakin ke?
+    - adakah ini benar?
+    - boleh percaya ke?
+    - benar ke?
+    - betul atau tidak?
+    - awak pasti ke?
+
+- intent: thanks_my
+  examples: |
+    - Terima kasih
+    - TQ
+    - makasih
+    - trimas
+    - thanks
+    - thank you
+    - Terima kasih banyak!
+
+- intent: dont_know_where_to_eat
+  examples: |
+    - lapar ni
+
+# - intent: ask_latest_hebahan
+#   examples: |
+#     - hebahan terkini
+#     - Hebahan terbaru
+#     - Ada pengumuman terkini?
+#     - makluman terkini
+#     - Info hebahan terbaru
+#     - Pengumuman baru
+- synonym: larkin
+  examples: |
+    - Larkin
