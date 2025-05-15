@@ -34,9 +34,16 @@ intents:
 - salam
 - search_restaurant_name_my
 - thanks_my
-
 - dont_know_where_to_eat
 - inform
+
+- ask_capabilities
+- ask_learning
+- request_help
+- dont_understand
+- bot_not_working
+- report_error
+- ask_joke
 
 forms:
   restaurant_suggestion_form:
@@ -144,6 +151,22 @@ responses:
 
   utter_reply_thanks:
   - text: Sama-sama, saya sedia untuk membantu anda!😊
+  utter_capabilities:
+  - text: "Saya boleh bantu dengan:\n- Jawab soalan FAQ berkenaan Kampung Kita\n- Suggest tempat makan\n- Beri maklumat produk/item jual beli\n Ada keperluan khusus?"
+  utter_learning:
+  - text: "Saya boleh diperbaiki dari masa ke masa, tapi saya bukan manusia."
+  - text: "Ya, pembangun saya akan tingkatkan kebolehan saya selalu!"
+  utter_help:
+  - text: "Baik! Ini yang saya boleh bantu:\n1. Jawab soalan\n2. Bantu masalah\n3. Beri panduan\nAnda perlukan apa?"
+  - text: "Sedia membantu! Fokus saya pada:\n- Maklumat produk\n- Panduan penggunaan semua yang berkaitan dengan kampung kita"
+  utter_clarify:
+  - text: "Maaf! saya ni AI. Cuba tanya benda lain."
+  - text: "Maaf! saya ni AI. Saya masih belajar! Cuba tanya dengan cara lain."
+  utter_tell_joke:
+  - text: "Kenapa komputer takut hantu? Sebab ada *bug*! 😄"
+  - text: "Apa makanan kegemaran robot? Microchips!"
+
+
 
   utter_ask_req_area:
   - text: "Di kawasan mana awak nak makan?"
@@ -175,4 +198,10 @@ actions:
 - utter_iamabot_my
 - action_search_item
 - action_suggest_restaurant
+- utter_bot_error
+- utter_capabilities
+- utter_learning
+- utter_help
+- utter_clarify
+- utter_tell_joke
 

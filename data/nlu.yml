@@ -24,6 +24,7 @@ nlu:
     - selamat tengah hari
     - helo
     - apa khabar
+
 - intent: goodbye_en
   examples: |
     - cu
@@ -44,6 +45,7 @@ nlu:
     - selamat malam
     - semoga hari anda indah
     - selamat berpisah
+
 - intent: affirm_en
   examples: |
     - yes
@@ -156,6 +158,7 @@ nlu:
     - today's obituary news
     - today's death list
     - latest death news
+    
 - intent: ask_death_today_my
   examples: |
     - ada kematian hari ini?
@@ -165,6 +168,7 @@ nlu:
     - berita orang meninggal hari ini
     - senarai orang meninggal dunia hari ini
     - Apa berita kematian harini?
+
 - intent: confirm_check_en
   examples: |
     - are you sure?
@@ -185,6 +189,8 @@ nlu:
     - benar ke?
     - betul atau tidak?
     - awak pasti ke?
+    - ko pasti ke?
+    - are you sure?
 
 - intent: thanks_my
   examples: |
@@ -211,3 +217,95 @@ nlu:
 - synonym: larkin
   examples: |
     - Larkin
+
+
+
+- intent: ask_creator
+  examples: |
+    - siapa buat kamu?
+    - siapa pencipta kamu?
+    - kamu dibuat oleh siapa?
+    - developer kamu siapa?
+    - siapa yg buat awak?
+    - siapa yg buat awak?
+    - siapa yg buat kau?
+    - siapa yg develop kau?
+
+
+- intent: ask_capabilities
+  examples: |
+    - kamu boleh buat apa?
+    - apa yg kau boleh buat
+    - kau boleh buat apa je?
+    - kau boleh buat pe je?
+    - apa je kau boleh buat
+    - apa fungsi kamu?
+    - apa function kau do?
+    - bantu saya
+    - apa yang kamu boleh tolong?
+    - apa yg kau boleh tolong
+
+
+- intent: ask_learning
+  examples: |
+    - kamu boleh belajar?
+    - boleh kamu improve?
+    - kamu akan jadi lebih pandai ke?
+    - awak ni bodo ke?
+    - awak ni pandai ke?
+    - apalah awak ni
+    - faham bahasa tk?
+
+- intent: request_help
+  examples: |
+    - tolong
+    - tolong saya
+    - tlg saya
+    - boleh tolong saya?
+    - blh tlg saya tk?
+    - saya perlukan bantuan
+    - sy nk bantuan
+    - help me
+    - boleh kamu bantu?
+    - blh awk bantu?
+    - saya ada masalah
+    - sy ada problem
+    - saya ada problem
+
+
+- intent: dont_understand
+  examples: |
+    - saya tak faham
+    - sy x fhm
+    - tak jelas
+    - tk jeslas
+    - kamu tak jawab soalan saya
+    - kamu tk jwb soalan sy
+    - ko tk jwb soalan sy
+    - kau tk jwb soalan
+
+
+- intent: bot_not_working
+  examples: |
+    - kamu tak berfungsi
+    - sistem error
+    - chatbot rosak
+
+- intent: report_error
+  examples: |
+    - saya dapat error
+    - ada mesej ralat
+    - sistem menunjukkan masalah
+
+- intent: ask_joke
+  examples: |
+    - cer buat lawak
+    - cuba buat lawak
+    - cb buat lwk
+    - cb buat kelakar
+
+    - bagi satu jenaka
+    - buat joke
+    - buat saya ketawa
+    - buat says gelak
+

@@ -47,3 +47,34 @@ rules:
   steps:
     - intent: thanks_my
     - action: utter_reply_thanks
+
+
+- rule: Respond to capability questions
+  steps:
+  - intent: ask_capabilities
+  - action: utter_capabilities
+
+- rule: Respond to learning questions
+  steps:
+  - intent: ask_learning
+  - action: utter_learning
+
+- rule: Respond to help requests
+  steps:
+  - intent: request_help
+  - action: utter_help
+
+- rule: Handle confusion
+  steps:
+  - intent: dont_understand
+  - action: utter_clarify
+
+- rule: Handle bot errors
+  steps:
+  - intent: bot_not_working
+  - action: utter_bot_error
+
+- rule: Tell joke
+  steps:
+  - intent: ask_joke
+  - action: utter_tell_joke
